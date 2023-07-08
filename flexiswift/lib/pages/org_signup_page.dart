@@ -239,9 +239,9 @@ class _OrgSignUpPageState extends State<OrgSignUpPage> {
                         // The validator receives the text that the user has entered.
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'Please enter gmail';
-                          } else if (!value.endsWith('@gmail.com')) {
-                            return 'please enter valid gmail';
+                            return 'Please enter email';
+                          } else if (!value.contains('@')) {
+                            return 'please enter valid email';
                           }
                           return null;
                         },
