@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Exclude specific directories from rewriting
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_URI} !^/assets/css/
+RewriteCond %{REQUEST_URI} !^/assets/js/
+RewriteCond %{REQUEST_URI} !^/assets/images/
+RewriteCond %{REQUEST_URI} !^/assets/fonts/
+
+# Rewrite all other requests to the public/index.php file
+RewriteRule ^(.*)$ /public/index.php [L]
